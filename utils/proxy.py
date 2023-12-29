@@ -26,6 +26,6 @@ class ProxyManager:
     def __delitem__(self, index):
         del self.proxies[index]
 
-    def _check_data(self):
+    def check_data(self):
         if not self.proxies:
             raise ValueError('Proxy not specified')

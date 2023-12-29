@@ -26,6 +26,6 @@ class ServiceManager:
     def __delitem__(self, index):
         del self.services[index]
 
-    def _check_data(self):
+    def check_data(self):
         if not self.services:
             raise ValueError('Service not specified')

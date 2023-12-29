@@ -16,8 +16,8 @@ class Parser:
                f'services: {self.services}'
 
     def check_data(self):
-        self.proxies._check_data()
-        self.services._check_data()
+        self.proxies.check_data()
+        self.services.check_data()
 
     def create_work(self):
         for proxy in self.proxies:
