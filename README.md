@@ -12,3 +12,8 @@ dump/load from file
 reload limit
 добавление сервисов в limit manager
 управление сервисами
+
+
+
+# Security
+1. maybe save and print proxy passport in hash
