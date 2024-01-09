@@ -1,5 +1,4 @@
-from type import Service
-from utils import ServiceManager
+from type import Service, ServiceManager
 
 manager = ServiceManager()
 

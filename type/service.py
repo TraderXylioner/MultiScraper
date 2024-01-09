@@ -35,4 +35,3 @@ class ServiceManager:
     def check_data(self):
         if not self.services:
             raise ValueError('Service not specified')
-
