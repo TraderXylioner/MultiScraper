@@ -12,3 +12,11 @@ class Request:
     @response.setter
     def response(self, response):
         self._response = response
+
+    @property
+    def proxy(self):
+        return self._proxy
+
+    @proxy.setter
+    def proxy(self, proxy):
+        self._proxy = proxy
