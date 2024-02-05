@@ -21,9 +21,8 @@ class Parser:
             try:
                 await self.manager.get_proxy(request)
                 async with aiohttp.ClientSession(trust_env=True) as session:
-                    async with session.get(url=request.url, proxy=request.proxy.to_string(), ssl=True) as response:
+                    async with session.get(url=request.url, proxy=request._proxy.to_string(), ssl=True) as response:
                         request.response = await response.json()
-                        print(request.response)
                         break
             except Exception as ex:
                 raise ex
