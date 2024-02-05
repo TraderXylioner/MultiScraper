@@ -1,5 +1,3 @@
-import asyncio
-
 import aiohttp
 
 from type import Request, Task
