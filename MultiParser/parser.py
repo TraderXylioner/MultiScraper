@@ -1,6 +1,6 @@
 import aiohttp
 
-from ..type import Request, Task
+from type import Request, Task
 from .manager import Manager
 
 
