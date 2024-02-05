@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "multiparser"
+name = "multiscraper"
 version = "0.1.0"
 description = ""
 authors = ["T_X <treider.xylioner@gmail.com>"]
