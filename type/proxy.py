@@ -23,29 +23,29 @@ class Proxy:
 
 class ProxyManager:
     def __init__(self, proxies: list[Proxy] | None = None):
-        self.proxies = proxies if proxies else []
+        self._proxies = proxies if proxies else []
 
     def add(self, proxy: Proxy):
-        self.proxies.append(proxy)
+        self._proxies.append(proxy)
 
     def remove(self, proxy: Proxy):
-        self.proxies.remove(proxy)
+        self._proxies.remove(proxy)
 
     def __repr__(self):
-        return f'{self.proxies}'
+        return f'{self._proxies}'
 
     def __len__(self):
-        return len(self.proxies)
+        return len(self._proxies)
 
     def __getitem__(self, index):
-        return self.proxies[index]
+        return self._proxies[index]
 
     def __setitem__(self, index, value):
-        self.proxies[index] = value
+        self._proxies[index] = value
 
     def __delitem__(self, index):
-        del self.proxies[index]
+        del self._proxies[index]
 
     def check_data(self):
-        if not self.proxies:
+        if not self._proxies:
             raise ValueError('Proxy not specified')
