@@ -32,7 +32,7 @@ class Manager:
                     res = proxy
             if base_limit > 0:
                 self.work[res][request.service] -= 1
-                request.proxy = res
+                request._proxy = res
                 break
             else:
                 await asyncio.sleep(0.1)
