@@ -10,11 +10,9 @@ class Parser:
     def __init__(self, manager: Manager):
         self.manager = manager
 
-    async def run_task(self, task: Task):
-        task = [asyncio.create_task(self.send_request(req)) for req in task]
+    async def run_task(self, task: Task) -> Task:
         for req in task:
-            # await self.send_request(task)
-            await req
+            await self.send_request(req)
         return task
 
     async def send_request(self, request: Request):
