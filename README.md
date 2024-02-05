@@ -1,8 +1,9 @@
 # MultiParser
     
-    parser = Parser()    
-    parser.proxies.add(Proxy('HTTP', 'localhost'))
-    parser.services.add(Service('site', 50))
+    manager = Manager()
+    manager.proxies.add(Proxy('HTTP', 'localhost'))
+    manager.services.add(Service('site', 50))
+    parser = Parser(manager)
 
     await parser.run_manager()
     
