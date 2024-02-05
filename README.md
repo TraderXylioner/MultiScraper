@@ -1,13 +1,16 @@
 # MultiParser
     
+    from MultiScraper import Parser, Manager
+    from MultiScraper.type import Proxy, Service, Task
+    
     manager = Manager()
     manager.proxies.add(Proxy('HTTP', 'localhost'))
     manager.services.add(Service('site', 50))
     parser = Parser(manager)
 
-    await parser.run_manager()
+    await manager.run_manager()
     
-    tasks = [Task('http://site.com', 'site') for i in range(100)]
+    tasks = [Task.add('http://site.com', 'site') for i in range(100)]
 
     # Sequential execution, with Task 2 starting only after Task 1 completes
     for task in tasks:
