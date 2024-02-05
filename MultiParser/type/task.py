@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from . import Request
+from .request import Request
 
 
 @dataclass

@@ -1,6 +1,6 @@
 import asyncio
 
-from type import Request, ServiceManager, ProxyManager
+from ..type import Request, ServiceManager, ProxyManager
 
 
 class Manager:

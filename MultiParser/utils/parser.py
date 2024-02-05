@@ -1,7 +1,7 @@
 import aiohttp
 
-from type import Request, Task
-from utils.manager import Manager
+from ..type import Request, Task
+from .manager import Manager
 
 
 class Parser:
